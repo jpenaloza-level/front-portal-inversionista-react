@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner-home {
+  background:
+    linear-gradient(to right, #ff8f00 52%, rgba(247, 147, 30, 0) 100%),
+    url("./assets/img/banner-home.png") right center no-repeat;
+  background-size: contain;
+}
+
+.card {
+  background: transparent url("./assets/img/transparencia-ocupación.png") right
+    center no-repeat;
+  background-size: contain;
+}
+
+@media only screen and (min-width: 1450px) {
+  .banner-home {
+    background:
+      linear-gradient(to right, #ff8f00 63%, rgba(247, 147, 30, 0) 100%),
+      url("./assets/img/banner-home.png") right center no-repeat;
+    background-size: contain;
+  }
+}

@@ -1,0 +1,16 @@
+/* color palette from <https://github.com/vuejs/theme> */
+
+
+@font-face {
+  font-family: 'Logo';
+  src: url('./fonts/RoadRadio-Bold.ttf');
+  font-weight: 'bold';
+}
+
+body {
+  font-family: var(--v-font-family-1), 'Roboto', sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: var(--v-font-family-2), sans-serif;
+}
