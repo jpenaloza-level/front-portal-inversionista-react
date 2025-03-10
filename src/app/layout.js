@@ -123,7 +123,7 @@ export default function RootLayout({ children }) {
 
   const renderToolbarActions = () => {
     return (
-      <Grid2 container>
+      <Grid2 container sx={{ display: { xs: "none", md: "block" } }}>
         <Grid2 size={12}>
           <SearchBar
             onChangeText={(texto) =>

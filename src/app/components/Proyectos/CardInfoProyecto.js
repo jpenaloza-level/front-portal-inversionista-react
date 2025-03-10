@@ -10,7 +10,7 @@ const CardInfoProyecto = ({ onVerUbicacion, proyecto }) => {
   return (
     <Paper sx={{ bgcolor: "white", p: 2, borderRadius: 6 }} elevation={3}>
       <Grid2 container>
-        <Grid2 size={6}>
+        <Grid2 size={{ md: 6, xs: 12 }}>
           <Image
             src="https://www.shutterstock.com/image-photo/new-modern-block-flats-green-600nw-2501530247.jpg"
             height={200}
@@ -20,13 +20,16 @@ const CardInfoProyecto = ({ onVerUbicacion, proyecto }) => {
             alt="Imagen del proyecto"
           />
         </Grid2>
-        <Grid2 size={6}>
+        <Grid2 size={{ md: 6, xs: 12 }}>
           <Grid2
             container
             justifyContent="center"
             sx={{ height: "100%", p: 4 }}
           >
-            <Grid2 size={6}>
+            <Grid2
+              size={{ md: 6, xs: 12 }}
+              sx={{ textAlign: { md: "left", xs: "center" } }}
+            >
               <Grid2 container>
                 <Grid2 size={12}>
                   <Typography
@@ -45,7 +48,10 @@ const CardInfoProyecto = ({ onVerUbicacion, proyecto }) => {
                 </Grid2>
               </Grid2>
             </Grid2>
-            <Grid2 size={6} sx={{ textAlign: "right" }}>
+            <Grid2
+              size={{ md: 6, xs: 12 }}
+              sx={{ textAlign: { md: "right", xs: "center" } }}
+            >
               <Grid2 container>
                 <Grid2 size={12}>
                   <Typography
@@ -65,39 +71,39 @@ const CardInfoProyecto = ({ onVerUbicacion, proyecto }) => {
               sx={{ border: "1px solid #cccccc", borderRadius: 6 }}
             >
               <Grid2 container spacing={2} sx={{ p: 2 }}>
-                <Grid2 size={6}>
+                <Grid2 size={{ md: 6, xs: 12 }}>
                   <Typography>
                     Año de contrucción: {proyecto.annoConstruccion}
                   </Typography>
                 </Grid2>
-                <Grid2 size={6}>
+                <Grid2 size={{ md: 6, xs: 12 }}>
                   <Typography>
                     Total Unidades: {proyecto.totalUnidades}
                   </Typography>
                 </Grid2>
-                <Grid2 size={6}>
+                <Grid2 size={{ md: 6, xs: 12 }}>
                   <Typography>
                     Cantidad de Pisos: {proyecto.pisosHasta}
                   </Typography>
                 </Grid2>
-                <Grid2 size={6}>
+                <Grid2 size={{ md: 6, xs: 12 }}>
                   <Typography>
                     Dormitorios: {proyecto.dormDesde} hasta {proyecto.dormHasta}
                   </Typography>
                 </Grid2>
-                <Grid2 size={6}>
+                <Grid2 size={{ md: 6, xs: 12 }}>
                   <Typography>
                     Departamentos por Piso: {proyecto.deptosPorPisoHasta}
                   </Typography>
                 </Grid2>
-                <Grid2 size={6}>
+                <Grid2 size={{ md: 6, xs: 12 }}>
                   <Typography>
                     Baños: {proyecto.banosDesde} hasta {proyecto.banosHasta}
                   </Typography>
                 </Grid2>
               </Grid2>
             </Grid2>
-            <Grid2 size={6} sx={{ mt: 2, p: 1 }}>
+            <Grid2 size={{ md: 6, xs: 12 }} sx={{ mt: 2, p: 1 }}>
               <Button
                 variant="outlined"
                 color="primary"
@@ -108,7 +114,7 @@ const CardInfoProyecto = ({ onVerUbicacion, proyecto }) => {
                 Ver Ubicación
               </Button>
             </Grid2>
-            <Grid2 size={6} sx={{ mt: 2, p: 1 }}>
+            <Grid2 size={{ md: 6, xs: 12 }} sx={{ mt: 2, p: 1 }}>
               <Button variant="contained" color="primary" fullWidth>
                 Ver Unidades del Proyecto
               </Button>

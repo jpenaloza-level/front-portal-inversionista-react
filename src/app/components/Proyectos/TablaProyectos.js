@@ -77,10 +77,13 @@ const TablaProyectos = () => {
 
   return (
     <Grid2 container>
-      <Grid2 size={9}>
+      <Grid2
+        size={{ md: 9, xs: 12 }}
+        sx={{ display: { xs: "none", md: "block" } }}
+      >
         <LeyendaOcupacion />
       </Grid2>
-      <Grid2 size={3}>
+      <Grid2 size={{ md: 3, xs: 12 }}>
         <Button
           sx={{ bgcolor: "#ffffff", color: "#000000" }}
           variant="contained"
@@ -100,27 +103,27 @@ const TablaProyectos = () => {
         }}
       >
         <Grid2 container>
-          <Grid2 size={3}>
+          <Grid2 size={{ md: 3, xs: 3 }}>
             <Typography variant="subtitle2" sx={{ fontWeight: "bold" }}>
               Nombre del Proyecto
             </Typography>
           </Grid2>
-          <Grid2 size={3}>
+          <Grid2 size={{ md: 2, xs: 3 }}>
             <Typography variant="subtitle2" sx={{ fontWeight: "bold" }}>
               Dirección
             </Typography>
           </Grid2>
-          <Grid2 size={1}>
+          <Grid2 size={{ md: 2, xs: 3 }}>
             <Typography variant="subtitle2" sx={{ fontWeight: "bold" }}>
               Comuna
             </Typography>
           </Grid2>
-          <Grid2 size={3}>
+          <Grid2 size={{ md: 3 }} sx={{ display: { xs: "none", md: "block" } }}>
             <Typography variant="subtitle2" sx={{ fontWeight: "bold" }}>
               % Ocupación
             </Typography>
           </Grid2>
-          <Grid2 size={2}></Grid2>
+          <Grid2 size={{ md: 2, xs: 3 }}></Grid2>
         </Grid2>
       </Grid2>
       {proyectos.map(
@@ -138,15 +141,18 @@ const TablaProyectos = () => {
               }}
             >
               <Grid2 container alignItems={"center"}>
-                <Grid2 size={3}>
+                <Grid2 size={{ md: 3, xs: 3 }}>
                   <Grid2 container alignItems={"center"}>
-                    <Grid2 size={2}>
+                    <Grid2
+                      size={2}
+                      sx={{ display: { xs: "none", md: "block" } }}
+                    >
                       <Avatar
                         alt={`Imagen del proyecto ${proyecto.nameProject}`}
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5SMwOlLZTGcnPAZTMJEPQsmjtWCf2hobV0w&s"
                       />
                     </Grid2>
-                    <Grid2 size={10}>
+                    <Grid2 size={{ md: 10, xs: 12 }}>
                       <Typography
                         variant="subtitle2"
                         sx={{ fontWeight: "bold" }}
@@ -156,24 +162,27 @@ const TablaProyectos = () => {
                     </Grid2>
                   </Grid2>
                 </Grid2>
-                <Grid2 size={3}>
+                <Grid2 size={{ md: 2, xs: 3 }}>
                   <Typography variant="subtitle2">
                     {proyecto.directionProject}
                   </Typography>
                 </Grid2>
-                <Grid2 size={1}>
+                <Grid2 size={{ md: 2, xs: 3 }}>
                   <Typography variant="subtitle2">
                     {proyecto.comunaProject}
                   </Typography>
                 </Grid2>
-                <Grid2 size={3}>
+                <Grid2
+                  size={{ md: 3 }}
+                  sx={{ display: { xs: "none", md: "block" } }}
+                >
                   <MultiProgress
                     elements={getMultiProgressValue(proyecto)}
                     component={CustomProgress}
                     height={20}
                   />
                 </Grid2>
-                <Grid2 size={2} sx={{ textAlign: "center" }}>
+                <Grid2 size={{ md: 2, xs: 3 }} sx={{ textAlign: "center" }}>
                   <Button
                     color="primary"
                     variant="contained"

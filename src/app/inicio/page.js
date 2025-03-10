@@ -139,9 +139,9 @@ const Inicio = () => {
       <Grid2 size={12}>
         <Banner />
       </Grid2>
-      <Grid2 size={9}>
+      <Grid2 size={{ md: 9, xs: 12 }}>
         <Grid2 container>
-          <Grid2 size={4}>
+          <Grid2 size={{ md: 4, xs: 12 }}>
             {proyectos.length ? (
               <FormControl fullWidth>
                 <InputLabel id="select-proyecto-label">Proyecto</InputLabel>
@@ -165,7 +165,7 @@ const Inicio = () => {
           </Grid2>
         </Grid2>
       </Grid2>
-      <Grid2 size={3}>
+      <Grid2 size={{ md: 3, xs: 12 }}>
         <Button
           color="disabled"
           variant="contained"
@@ -189,7 +189,7 @@ const Inicio = () => {
         <LoadingSkeleton />
       ) : (
         Object.keys(productos).map((producto, index) => (
-          <Grid2 size={4} key={index}>
+          <Grid2 size={{ md: 4, xs: 12 }} key={index}>
             {renderCardProducto(producto, productos[producto])}
           </Grid2>
         ))

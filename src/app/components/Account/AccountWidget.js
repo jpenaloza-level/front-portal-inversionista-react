@@ -26,12 +26,15 @@ const AccountWidget = () => {
       spacing={1}
       alignItems={"center"}
       justifyContent={"right"}
-      sx={{ p: 1, width: 280 }}
+      sx={{ p: 1, width: "100%" }}
     >
-      <Grid2 size={2} sx={{ m: 0, p: 0 }}>
+      <Grid2
+        size={{ md: 2 }}
+        sx={{ m: 0, p: 0, display: { xs: "none", md: "block" } }}
+      >
         <Avatar src="https://www.shutterstock.com/image-photo/city-pride-man-portrait-travel-260nw-2539840129.jpg" />
       </Grid2>
-      <Grid2 size={8}>
+      <Grid2 size={{ md: 10, xs: 12 }}>
         <Typography
           sx={{ m: 0, p: 0 }}
           variant="subtitle2"

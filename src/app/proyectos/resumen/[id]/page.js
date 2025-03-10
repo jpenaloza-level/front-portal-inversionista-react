@@ -211,7 +211,7 @@ const ProyectoDetalle = () => {
             <LoadingSkeleton />
           ) : (
             Object.keys(productos).map((producto, index) => (
-              <Grid2 size={4} key={index}>
+              <Grid2 size={{ md: 4, xs: 12 }} key={index}>
                 {renderCardProducto(producto, productos[producto])}
               </Grid2>
             ))
