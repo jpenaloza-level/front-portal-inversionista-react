@@ -3,6 +3,7 @@
 import * as React from "react";
 import { Geist_Mono, Open_Sans } from "next/font/google";
 import "./globals.css";
+import "mapbox-gl/dist/mapbox-gl.css";
 import { NextAppProvider } from "@toolpad/core/nextjs";
 import { DashboardLayout } from "@toolpad/core/DashboardLayout";
 import AppsRoundedIcon from "@mui/icons-material/AppsRounded";

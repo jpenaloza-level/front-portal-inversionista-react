@@ -33,6 +33,7 @@ import MenuProyectosBtn from "@/app/components/Proyectos/MenuProyectosBtn";
 import { AdvancedMarker, Map, Pin } from "@vis.gl/react-google-maps";
 import Image from "next/image";
 import _ from "lodash";
+import Mapbox from "../../../components/Mapas/Mapbox/Map";
 
 const ProyectoDetalle = () => {
   const { id } = useParams();
@@ -158,8 +159,10 @@ const ProyectoDetalle = () => {
         <DialogContent>
           <Grid2 container>
             <Grid2 size={12}>
-              <div style={{ height: 550 }}>
-                <Map
+              <div style={{ height: 700 }}>
+                <Mapbox lat="-33.4079771" lng="-70.5741556" />
+
+                {/*  <Map
                   mapId="map-proyecto"
                   defaultZoom={17}
                   defaultCenter={{ lat: -33.4080113, lng: -70.5741263 }}
@@ -187,7 +190,7 @@ const ProyectoDetalle = () => {
                       />
                     </Box>
                   </AdvancedMarker>
-                </Map>
+                </Map>*/}
               </div>
             </Grid2>
           </Grid2>
