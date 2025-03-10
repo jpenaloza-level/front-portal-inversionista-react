@@ -161,36 +161,6 @@ const ProyectoDetalle = () => {
             <Grid2 size={12}>
               <div style={{ height: 700 }}>
                 <Mapbox lat="-33.4079771" lng="-70.5741556" />
-
-                {/*  <Map
-                  mapId="map-proyecto"
-                  defaultZoom={17}
-                  defaultCenter={{ lat: -33.4080113, lng: -70.5741263 }}
-                  fullscreenControl={false}
-                >
-                  <AdvancedMarker
-                    key={1}
-                    position={{ lat: -33.4080113, lng: -70.5741263 }}
-                    title="Proyeto Level"
-                  >
-                    <Box
-                      sx={{
-                        bgcolor: "#ffffff",
-                        p: 1,
-                        borderRadius: 6,
-                        border: "solid 0.5px #cccccc",
-                      }}
-                    >
-                      <Image
-                        src="/logo_only.svg"
-                        style={{ backgroundColor: "#ffffff" }}
-                        width={40}
-                        height={40}
-                        alt="Imagen fondo banner"
-                      />
-                    </Box>
-                  </AdvancedMarker>
-                </Map>*/}
               </div>
             </Grid2>
           </Grid2>

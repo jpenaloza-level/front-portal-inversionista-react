@@ -23,7 +23,6 @@ import "@fontsource/open-sans/500.css";
 import "@fontsource/open-sans/700.css";
 import AccountWidget from "./components/Account/AccountWidget";
 import SearchBar from "./components/Inicio/SearchBar";
-import { APIProvider } from "@vis.gl/react-google-maps";
 import Home from "./page";
 import LoadingSkeleton from "./components/LoadingSkeleton";
 
@@ -142,43 +141,38 @@ export default function RootLayout({ children }) {
         className={`${openSans.variable} ${geistMono.variable} antialiased`}
       >
         <Provider store={store}>
-          <APIProvider
-            apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
-            onLoad={() => console.log("Se ha cargado la API de Google Maps.")}
-          >
-            <ThemeProvider theme={theme}>
-              <React.Suspense fallback={<div>Loading...</div>}>
-                <NextAppProvider
-                  navigation={NAVIGATION}
-                  theme={theme}
-                  branding={{
-                    homeUrl: "/",
-                    logo: (
-                      <Image
-                        src="/logo-level.png"
-                        height={80}
-                        width={120}
-                        alt="logo level"
-                      />
-                    ),
-                    title: "",
+          <ThemeProvider theme={theme}>
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <NextAppProvider
+                navigation={NAVIGATION}
+                theme={theme}
+                branding={{
+                  homeUrl: "/",
+                  logo: (
+                    <Image
+                      src="/logo-level.png"
+                      height={80}
+                      width={120}
+                      alt="logo level"
+                    />
+                  ),
+                  title: "",
+                }}
+              >
+                <DashboardLayout
+                  sidebarExpandedWidth={260}
+                  sx={{ bgcolor: "#EDF2F7" }}
+                  slots={{
+                    sidebarFooter: () => renderSidebarFooter(),
+                    toolbarActions: () => renderToolbarActions(),
+                    toolbarAccount: () => <AccountWidget />,
                   }}
                 >
-                  <DashboardLayout
-                    sidebarExpandedWidth={260}
-                    sx={{ bgcolor: "#EDF2F7" }}
-                    slots={{
-                      sidebarFooter: () => renderSidebarFooter(),
-                      toolbarActions: () => renderToolbarActions(),
-                      toolbarAccount: () => <AccountWidget />,
-                    }}
-                  >
-                    <Home>{children}</Home>
-                  </DashboardLayout>
-                </NextAppProvider>
-              </React.Suspense>
-            </ThemeProvider>
-          </APIProvider>
+                  <Home>{children}</Home>
+                </DashboardLayout>
+              </NextAppProvider>
+            </React.Suspense>
+          </ThemeProvider>
         </Provider>
       </body>
     </html>
